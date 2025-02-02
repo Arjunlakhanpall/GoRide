@@ -1,15 +1,11 @@
-
-**GoRide**https://arjunlakhanpall.github.io/GoRide/
-![GoRide Demo]()![Screenshot 2025-02-02 235852]
-
-(https://github.com/user-attachments/assets/e3c20d99-1def-4237-a885-0215af8b42b5)
-
-
+# GoRide
 
 A modern web platform for booking city cabs, built with React.js (frontend) and Node.js/Express (backend).
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://your-demo-url.com)
+[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://arjunlakhanpall.github.io/GoRide/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+![GoRide Demo](https://github.com/user-attachments/assets/e3c20d99-1def-4237-a885-0215af8b42b5)
 
 ## Features ✨
 
@@ -32,115 +28,117 @@ A modern web platform for booking city cabs, built with React.js (frontend) and 
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/goride.git
-cd goride
+git clone https://github.com/arjunlakhanpall/GoRide.git
+cd GoRide
+```
 
-
-2. Frontend Setup
+### 2. Frontend Setup
+```bash
 cd frontend
 npm install
+```
 
-
-Backend Setup
+### 3. Backend Setup
+```bash
 cd ../backend
 npm install
+```
 
+### 4. Configuration ⚙️
 
-Configuration ⚙️
-Backend Environment (.env)
-
+#### Backend Environment (`.env`)
+```plaintext
 MONGODB_URI=mongodb+srv://<user>:<password>@cluster0.example.mongodb.net/goride
 JWT_SECRET=your_jwt_secret_key
 GOOGLE_MAPS_API_KEY=your_google_maps_key
 PORT=5000
+```
 
-Frontend Configuration
-Replace in frontend/src/config.js:
+#### Frontend Configuration
+Replace in `frontend/src/config.js`:
+```javascript
 export const MAPS_API_KEY = 'your_google_maps_key';
+```
 
-Running the Application ▶️
-Start Backend Server
+### 5. Running the Application ▶️
+
+#### Start Backend Server
+```bash
 cd backend
 npm run dev
+```
 
-Start Frontend
+#### Start Frontend
+```bash
 cd frontend
 npm start
-
+```
 
 The app will be available at:
+- **Frontend:** [http://localhost:3000](http://localhost:3000)
+- **Backend API:** [http://localhost:5000](http://localhost:5000)
 
-Frontend: http://localhost:3000
+## API Endpoints 🔌
 
-Backend API: http://localhost:5000
+| Method | Endpoint          | Description              |
+|--------|------------------|--------------------------|
+| POST   | `/api/auth/signup` | User registration        |
+| POST   | `/api/auth/login`  | User login              |
+| POST   | `/api/rides`       | Create new ride request |
+| GET    | `/api/rides`       | Get user's ride history |
+| GET    | `/api/drivers`     | Get available drivers   |
 
-API Endpoints 🔌
-Method	Endpoint	Description
-POST	/api/auth/signup	User registration
-POST	/api/auth/login	User login
-POST	/api/rides	Create new ride request
-GET	/api/rides	Get user's ride history
-GET	/api/drivers	Get available drivers
-Tech Stack 💻
-Frontend
+## Tech Stack 💻
 
-React.js
+### Frontend
+- React.js
+- Tailwind CSS
+- Axios (API calls)
+- React Router (Navigation)
+- Google Maps JavaScript API
 
-Tailwind CSS
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Database)
+- Mongoose (ODM)
+- JWT (Authentication)
 
-Axios (API calls)
+### DevOps
+- GitHub Actions (CI/CD)
+- Netlify (Frontend Hosting)
+- Heroku (Backend Hosting)
 
-React Router (Navigation)
+## Deployment 🚀
 
-Google Maps JavaScript API
+### Frontend:
+- Deploy to Netlify
 
-Backend
+### Backend:
+- Deploy to Heroku
 
-Node.js
+## Contributing 🤝
 
-Express.js
-
-MongoDB (Database)
-
-Mongoose (ODM)
-
-JWT (Authentication)
-
-DevOps
-
-GitHub Actions (CI/CD)
-
-Netlify (Frontend Hosting)
-
-Heroku (Backend Hosting)
-
-Deployment 🚀
-Frontend:
-Deploy to Netlify
-
-Backend:
-Deploy to Heroku
-
-Contributing 🤝
-Fork the project
-
-Create your feature branch:
-**git checkout -b feature/amazing-feature**
-
-Commit changes:
-
+1. Fork the project
+2. Create your feature branch:
+```bash
+git checkout -b feature/amazing-feature
+```
+3. Commit changes:
+```bash
 git commit -m 'Add some amazing feature'
-
-
-Push to branch:
-
+```
+4. Push to branch:
+```bash
 git push origin feature/amazing-feature
+```
+5. Open a Pull Request
 
----
-
-### How to Use This README:
-1. Replace all placeholders Arjunlakhanpall
-2. Add actual screenshots to `/screenshots` folder
+## How to Use This README 📖
+1. Replace all placeholders (e.g., `your_google_maps_key`, `<user>:<password>`)
+2. Add actual screenshots to the `/screenshots` folder
 3. Update API endpoints if you modify the backend
 4. Include specific deployment instructions for your chosen platforms
-Thank you!
+
+Thank you! 🚀
+
