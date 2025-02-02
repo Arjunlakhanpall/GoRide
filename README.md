@@ -1,9 +1,7 @@
 
 **GoRide**
 
-https://arjunlakhanpall.github.io/GoRide/
-
-![GoRide Demo]()![Screenshot 2025-02-02 235852]
+https://arjunlakhanpall.github.io/GoRide/ ![GoRide Demo]()![Screenshot 2025-02-02 235852]
 
 (https://github.com/user-attachments/assets/e3c20d99-1def-4237-a885-0215af8b42b5)
 
