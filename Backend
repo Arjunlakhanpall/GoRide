@@ -1,0 +1,17 @@
+goride-backend/
+├── models/
+│   ├── User.js
+│   ├── Ride.js
+│   └── Driver.js
+├── routes/
+│   ├── auth.js
+│   ├── rides.js
+│   └── drivers.js
+├── controllers/
+│   ├── authController.js
+│   └── rideController.js
+├── middleware/
+│   └── auth.js
+├── .env
+├── server.js
+└── package.json
