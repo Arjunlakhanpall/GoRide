@@ -1,6 +1,7 @@
 ![image](https://github.com/user-attachments/assets/6694844c-a2a2-45e4-a7ce-d74681df6c75)# GoRide - City Cab Booking Platform 🚕
 
-![GoRide Demo]() ![Uploading Screenshot 2025-02-02 235852.png…]()
+![GoRide Demo]()![Screenshot 2025-02-02 235852](https://github.com/user-attachments/assets/e3c20d99-1def-4237-a885-0215af8b42b5)
+
 
 
 A modern web platform for booking city cabs, built with React.js (frontend) and Node.js/Express (backend).
