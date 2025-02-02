@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoRide - City Cab Booking</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <style>
+        #map {
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">GoRide</h1>
+            <div class="space-x-4">
+                <a href="#home" class="hover:text-blue-200">Home</a>
+                <a href="#features" class="hover:text-blue-200">Features</a>
+                <a href="#driver" class="hover:text-blue-200">Drive With Us</a>
+                <button class="bg-white text-blue-600 px-4 py-2 rounded-lg hover:bg-gray-100">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Book a Ride in Seconds</h2>
+                <p class="text-xl mb-8">Safe, affordable, and reliable city transportation</p>
+                
+                <!-- Booking Form -->
+                <div class="bg-white rounded-lg p-6 shadow-lg text-black">
+                    <form id="bookingForm" class="space-y-4">
+                        <div>
+                            <input type="text" 
+                                   id="pickup" 
+                                   class="w-full p-3 border rounded-lg"
+                                   placeholder="Enter pickup location">
+                        </div>
+                        
+                        <div>
+                            <input type="text" 
+                                   id="destination" 
+                                   class="w-full p-3 border rounded-lg"
+                                   placeholder="Enter destination">
+                        </div>
+
+                        <div>
+                            <select class="w-full p-3 border rounded-lg" id="rideType">
+                                <option value="economy">Economy</option>
+                                <option value="premium">Premium</option>
+                                <option value="xl">XL</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
+                            Book Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose GoRide?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="text-4xl mb-4">🚕</div>
+                    <h3 class="text-xl font-bold mb-4">24/7 Availability</h3>
+                    <p>Book rides anytime, anywhere in the city</p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="text-4xl mb-4">📍</div>
+                    <h3 class="text-xl font-bold mb-4">Live Tracking</h3>
+                    <p>Real-time driver location updates</p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold mb-4">Safe Payments</h3>
+                    <p>Secure cashless transactions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 GoRide. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-blue-400">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-400">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Google Maps Autocomplete
+        function initAutocomplete() {
+            const pickupInput = document.getElementById('pickup');
+            const destinationInput = document.getElementById('destination');
+
+            const autocomplete1 = new google.maps.places.Autocomplete(pickupInput);
+            const autocomplete2 = new google.maps.places.Autocomplete(destinationInput);
+        }
+
+        // Handle form submission
+        document.getElementById('bookingForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const pickup = document.getElementById('pickup').value;
+            const destination = document.getElementById('destination').value;
+            const rideType = document.getElementById('rideType').value;
+
+            alert(`Booking request:\nFrom: ${pickup}\nTo: ${destination}\nRide Type: ${rideType}`);
+        });
+
+        // Initialize when page loads
+        window.onload = initAutocomplete;
+    </script>
+</body>
+</html>
